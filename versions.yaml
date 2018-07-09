@@ -19,15 +19,27 @@ versions:
   - dir: '2/debian9/2.3'
     repo: prometheus2
     tags:
-      - '2.3.0-debian9'
+      - '2.3.1-debian9'
       - '2.3-debian9'
       - '2-debian9'
-      - '2.3.0'
+      - '2.3.1'
       - '2.3'
       - '2'
       - 'latest'
     from: *from
     packages:
       prometheus:
-        version: '2.3.0'
-        sha256: '3088dd15e4cbad65db40bff194e3c9c4e3df5245fe684c1251e5a48c18a1a822'
+        version: '2.3.1'
+        sha256: 'adb76021fcff8a2a8363de8739fcb7ff5647c2a0ff90b2c02dcb56cf0cd836f0'
+  - dir: '2/debian9/2.2'
+    repo: prometheus2
+    tags:
+      - '2.2.1-debian9'
+      - '2.2-debian9'
+      - '2.2.1'
+      - '2.2'
+    from: *from
+    packages:
+      prometheus:
+        version: '2.2.1'
+        sha256: 'ec1798dbda1636f49d709c3931078dc17eafef76c480b67751aa09828396cf31'
