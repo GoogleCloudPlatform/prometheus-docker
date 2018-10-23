@@ -1,5 +1,4 @@
 prometheus-docker
-
 ============
 
 Dockerfile source for Prometheus [docker](https://docker.io) image.
