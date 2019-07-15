@@ -1,8 +1,8 @@
 FROM gcr.io/google-appengine/debian9
-ENV PROMETHEUS_VERSION 2.10.0
+ENV PROMETHEUS_VERSION 2.11.0
 
 ENV PROMETHEUS_URL="https://github.com/prometheus/prometheus/releases/download/v$PROMETHEUS_VERSION/prometheus-$PROMETHEUS_VERSION.linux-amd64.tar.gz"
-ENV PROMETHEUS_SHA256 f4233783826f18606b79e5cef0686e4a9c2030146a3c7ce134f0add09f5adcb7
+ENV PROMETHEUS_SHA256 9705ee80713809b29995e94ce8786a901c046c9b3fd555aac965bf50a28bc2e3
 
 RUN set -x && \
     apt-get update && apt-get install -qq -y wget && \
