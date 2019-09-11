@@ -4,6 +4,8 @@ ENV PROMETHEUS_VERSION 2.2.1
 ENV PROMETHEUS_URL="https://github.com/prometheus/prometheus/releases/download/v$PROMETHEUS_VERSION/prometheus-$PROMETHEUS_VERSION.linux-amd64.tar.gz"
 ENV PROMETHEUS_SHA256 ec1798dbda1636f49d709c3931078dc17eafef76c480b67751aa09828396cf31
 
+ENV C2D_RELEASE=${PROMETHEUS_VERSION}
+
 RUN set -x && \
     apt-get update && apt-get install -qq -y wget && \
     mkdir -p /etc/prometheus && \
