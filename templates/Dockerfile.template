@@ -6,7 +6,7 @@ ENV PROMETHEUS_VERSION {{ $prometheus.Version }}
 ENV PROMETHEUS_URL="https://github.com/prometheus/prometheus/releases/download/v$PROMETHEUS_VERSION/prometheus-$PROMETHEUS_VERSION.linux-amd64.tar.gz"
 ENV PROMETHEUS_SHA256 {{ $prometheus.Sha256 }}
 
-ENV C2D_RELEASE=${PROMETHEUS_VERSION}
+ENV C2D_RELEASE ${PROMETHEUS_VERSION}
 
 RUN set -x && \
     apt-get update && apt-get install -qq -y wget && \
