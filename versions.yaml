@@ -19,18 +19,18 @@ versions:
   - dir: '2/debian9/2.28'
     repo: prometheus2
     tags:
-      - '2.28.0-debian9'
+      - '2.28.1-debian9'
       - '2.28-debian9'
       - '2-debian9'
-      - '2.28.0'
+      - '2.28.1'
       - '2.28'
       - '2'
       - 'latest'
     from: *from
     packages:
       prometheus:
-        version: '2.28.0'
-        sha256: 'd2d0ded275090a13208114b633abe41c40e14c83ff5ec07230d79b4da1d8e701'
+        version: '2.28.1'
+        sha256: '91dd91e13f30fe520e01175ca1027dd09a458d4421a584ba557ba88b38803f27'
   - dir: '2/debian9/2.18'
     repo: prometheus2
     tags:
