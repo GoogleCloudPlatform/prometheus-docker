@@ -16,21 +16,21 @@ _variables:
   from: &from gcr.io/google-appengine/debian9
 
 versions:
-  - dir: '2/debian9/2.30'
+  - dir: '2/debian9/2.32'
     repo: prometheus2
     tags:
-      - '2.30.2-debian9'
-      - '2.30-debian9'
+      - '2.32.1-debian9'
+      - '2.32-debian9'
       - '2-debian9'
-      - '2.30.2'
-      - '2.30'
+      - '2.32.1'
+      - '2.32'
       - '2'
       - 'latest'
     from: *from
     packages:
       prometheus:
-        version: '2.30.2'
-        sha256: '1f5c239f6fa8da511ae140eea8d3190c1a6e0093247d758d81c99d63684ae1e1'
+        version: '2.32.1'
+        sha256: 'f08e96d73330a9ee7e6922a9f5b72ea188988a083bbfa9932359339fcf504a74'
   - dir: '2/debian9/2.18'
     repo: prometheus2
     tags:
