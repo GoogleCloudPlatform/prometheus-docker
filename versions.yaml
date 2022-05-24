@@ -13,29 +13,29 @@
 # limitations under the License.
 
 _variables:
-  from: &from gcr.io/google-appengine/debian9
+  from: &from gcr.io/google-appengine/debian10
 
 versions:
-  - dir: '2/debian9/2.33'
+  - dir: '2/debian10/2.35'
     repo: prometheus2
     tags:
-      - '2.33.1-debian9'
-      - '2.33-debian9'
-      - '2-debian9'
-      - '2.33.1'
-      - '2.33'
+      - '2.35.0-debian10'
+      - '2.35-debian10'
+      - '2-debian10'
+      - '2.35.1'
+      - '2.35'
       - '2'
       - 'latest'
     from: *from
     packages:
       prometheus:
-        version: '2.33.1'
-        sha256: '55de29727fc4d3977d3400c54fa222ebb52755bd0201936f1e1052fea6f2b44b'
-  - dir: '2/debian9/2.18'
+        version: '2.35.0'
+        sha256: 'e4546960688d1c85530ec3a93e109d15b540f3251e1f4736d0d9735e1e857faf'
+  - dir: '2/debian10/2.18'
     repo: prometheus2
     tags:
-      - '2.18.1-debian9'
-      - '2.18-debian9'
+      - '2.18.1-debian10'
+      - '2.18-debian10'
       - '2.18.1'
       - '2.18'
     from: *from
