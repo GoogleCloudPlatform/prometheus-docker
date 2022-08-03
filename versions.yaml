@@ -16,21 +16,21 @@ _variables:
   from: &from gcr.io/google-appengine/debian10
 
 versions:
-  - dir: '2/debian10/2.35'
+  - dir: '2/debian10/2.37'
     repo: prometheus2
     tags:
-      - '2.35.0-debian10'
+      - '2.37.0-debian10'
       - '2.35-debian10'
       - '2-debian10'
-      - '2.35.1'
-      - '2.35'
+      - '2.37.0'
+      - '2.37'
       - '2'
       - 'latest'
     from: *from
     packages:
       prometheus:
-        version: '2.35.0'
-        sha256: 'e4546960688d1c85530ec3a93e109d15b540f3251e1f4736d0d9735e1e857faf'
+        version: '2.37.0'
+        sha256: 'ca70f5a261fd545da0b9893c42a73547a94ebd5111ef2b6b9f8742c5dbb73522'
   - dir: '2/debian10/2.18'
     repo: prometheus2
     tags:
