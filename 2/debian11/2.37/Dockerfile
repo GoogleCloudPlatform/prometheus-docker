@@ -1,13 +1,13 @@
-FROM gcr.io/google-appengine/debian10
-ENV PROMETHEUS_VERSION 2.37.0
+FROM gcr.io/google-appengine/debian11
+ENV PROMETHEUS_VERSION 2.37.1
 
 ENV PROMETHEUS_URL="https://github.com/prometheus/prometheus/releases/download/v$PROMETHEUS_VERSION/prometheus-$PROMETHEUS_VERSION.linux-amd64.tar.gz"
-ENV PROMETHEUS_SHA256 ca70f5a261fd545da0b9893c42a73547a94ebd5111ef2b6b9f8742c5dbb73522
+ENV PROMETHEUS_SHA256 753f66437597cf52ada98c2f459aa8c03745475c249c9f2b40ac7b3919131ba6
 
 ENV C2D_RELEASE ${PROMETHEUS_VERSION}
 
 RUN set -x && \
-    apt-get update && apt-get install -qq -y wget && \
+    apt-get update && apt-get install -qq -y wget openssl && \
     mkdir -p /etc/prometheus && \
     mkdir prometheus-files && cd prometheus-files && \
     wget -O prometheus.tar.gz "$PROMETHEUS_URL" && \
