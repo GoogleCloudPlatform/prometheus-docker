@@ -7,7 +7,7 @@ ENV PROMETHEUS_SHA256 9c1486f5f3e03d56433112594740ca84c6e59db061d096eeb3ea971ba2
 ENV C2D_RELEASE ${PROMETHEUS_VERSION}
 
 RUN set -x && \
-    apt-get update && apt-get install -qq -y wget openssl && \
+    apt-get update && apt-get install -qq -y wget openssl libtasn1-6 && \
     mkdir -p /etc/prometheus && \
     mkdir prometheus-files && cd prometheus-files && \
     wget -O prometheus.tar.gz "$PROMETHEUS_URL" && \
