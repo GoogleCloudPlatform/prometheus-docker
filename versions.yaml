@@ -1,4 +1,4 @@
-# Copyright 2018 Google LLC
+# Copyright 2023 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
 # limitations under the License.
 
 _variables:
-  from: &from gcr.io/google-appengine/debian11
+  from: &from marketplace.gcr.io/google/debian11
 
 versions:
   - dir: '2/debian11/2.41'
@@ -31,15 +31,3 @@ versions:
       prometheus:
         version: '2.41.0'
         sha256: '9c1486f5f3e03d56433112594740ca84c6e59db061d096eeb3ea971ba25441c9'
-  - dir: '2/debian11/2.33'
-    repo: prometheus2
-    tags:
-      - '2.33.1-debian11'
-      - '2.33-debian11'
-      - '2.33.1'
-      - '2.33'
-    from: *from
-    packages:
-      prometheus:
-        version: '2.33.1'
-        sha256: '55de29727fc4d3977d3400c54fa222ebb52755bd0201936f1e1052fea6f2b44b'
