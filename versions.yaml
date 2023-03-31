@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#      http://www.apache.org/licenses/LICENSE-2.0
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -12,34 +12,35 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_variables:
-  from: &from marketplace.gcr.io/google/c2d-debian11
 
+cloudbuild:
+  enable_parallel: false
 versions:
-  - dir: '2/debian11/2.41'
-    repo: prometheus2
-    tags:
-      - '2.41.0-debian11'
-      - '2.41-debian11'
-      - '2-debian11'
-      - '2.41.0'
-      - '2.41'
-      - '2'
-      - 'latest'
-    from: *from
-    packages:
-      prometheus:
-        version: '2.41.0'
-        sha256: '9c1486f5f3e03d56433112594740ca84c6e59db061d096eeb3ea971ba25441c9'
-  - dir: '2/debian11/2.33'
-    repo: prometheus2
-    tags:
-      - '2.33.1-debian11'
-      - '2.33-debian11'
-      - '2.33.1'
-      - '2.33'
-    from: *from
-    packages:
-      prometheus:
-        version: '2.33.1'
-        sha256: '55de29727fc4d3977d3400c54fa222ebb52755bd0201936f1e1052fea6f2b44b'
+- dir: 2/debian11/2.42
+  from: marketplace.gcr.io/google/c2d-debian11
+  packages:
+    prometheus:
+      sha256: 422dab055ed9c7bcaff52b718705f9192c6fac0de6b7e78dd278e70ee2663dcc
+      version: 2.42.0
+  repo: prometheus2
+  tags:
+  - 2.42.0-debian11
+  - 2.42-debian11
+  - 2-debian11
+  - 2.42.0
+  - '2.42'
+  - '2'
+  - latest
+- dir: 2/debian11/2.41
+  from: marketplace.gcr.io/google/c2d-debian11
+  packages:
+    prometheus:
+      sha256: 9c1486f5f3e03d56433112594740ca84c6e59db061d096eeb3ea971ba25441c9
+      version: 2.41.0
+  repo: prometheus2
+  tags:
+  - 2.41.0-debian11
+  - 2.41-debian11
+  - 2.41.0
+  - '2.41'
+
