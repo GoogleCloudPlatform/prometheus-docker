@@ -2,7 +2,6 @@ FROM marketplace.gcr.io/google/c2d-debian11
 ENV PROMETHEUS_VERSION 2.41.0
 
 ENV PROMETHEUS_URL="https://github.com/prometheus/prometheus/releases/download/v$PROMETHEUS_VERSION/prometheus-$PROMETHEUS_VERSION.linux-amd64.tar.gz"
-ENV PROMETHEUS_SHA256 9c1486f5f3e03d56433112594740ca84c6e59db061d096eeb3ea971ba25441c9
 
 ENV C2D_RELEASE ${PROMETHEUS_VERSION}
 
@@ -11,7 +10,6 @@ RUN set -x && \
     mkdir -p /etc/prometheus && \
     mkdir prometheus-files && cd prometheus-files && \
     wget -O prometheus.tar.gz "$PROMETHEUS_URL" && \
-    echo "$PROMETHEUS_SHA256 prometheus.tar.gz" | sha256sum -c - && \
     tar xfvz prometheus.tar.gz --strip-components=1 && \
     mv prometheus          /bin/ && \
     mv promtool            /bin/ && \
@@ -33,4 +31,3 @@ CMD        [ "--config.file=/etc/prometheus/prometheus.yml", \
              "--storage.tsdb.path=/prometheus", \
              "--web.console.libraries=/usr/share/prometheus/console_libraries", \
              "--web.console.templates=/usr/share/prometheus/consoles" ]
-
