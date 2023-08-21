@@ -16,10 +16,11 @@
 cloudbuild:
   enable_parallel: false
 versions:
-- dir: 2/debian11/2.44
+- dir: 2/debian11/2.42
   from: marketplace.gcr.io/google/c2d-debian11
   packages:
     prometheus:
+      sha256: 422dab055ed9c7bcaff52b718705f9192c6fac0de6b7e78dd278e70ee2663dcc
       version: 2.42.0
   repo: prometheus2
   tags:
@@ -30,14 +31,4 @@ versions:
   - '2.42'
   - '2'
   - latest
-- dir: 2/debian11/2.41
-  from: marketplace.gcr.io/google/c2d-debian11
-  packages:
-    prometheus:
-      version: 2.41.0
-  repo: prometheus2
-  tags:
-  - 2.41.0-debian11
-  - 2.41-debian11
-  - 2.41.0
-  - '2.41'
+
