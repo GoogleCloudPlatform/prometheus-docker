@@ -6,7 +6,7 @@ ENV PROMETHEUS_URL="https://github.com/prometheus/prometheus/releases/download/v
 ENV C2D_RELEASE ${PROMETHEUS_VERSION}
 
 RUN set -x && \
-    apt-get update && apt-get install -qq -y wget openssl libtasn1-6 && \
+    apt-get update && apt-get install -qq -y wget openssl libminizip-dev zlib1g-dev libtasn1-6 && \
     mkdir -p /etc/prometheus && \
     mkdir prometheus-files && cd prometheus-files && \
     wget -O prometheus.tar.gz "$PROMETHEUS_URL" && \
