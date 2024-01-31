@@ -31,16 +31,4 @@ versions:
   - '2.49'
   - '2'
   - latest
-- dir: 2/debian11/2.48
-  from: marketplace.gcr.io/google/c2d-debian11
-  packages:
-    prometheus:
-      sha256: 5d58b52ccfeff25700bc8d14ecc1235cbf112a05041e3b2f6900d16b44856f6f
-      version: 2.48.1
-  repo: prometheus2
-  tags:
-  - 2.48.1-debian11
-  - 2.48-debian11
-  - 2.48.1
-  - '2.48'
 
