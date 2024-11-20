@@ -39,11 +39,11 @@ versions:
   from: marketplace.gcr.io/google/debian12
   packages:
     prometheus:
+      sha256: 93460f66d17ee70df899e91db350d9705c20b1576800f96acbd78fa004e7dc07
+      version: 2.49.1
   annotations:
   - key: com.googleapis.cloudmarketplace.product.service.name
     value: services/dfd27a7c-1349-420c-82bc-cb0a4f1f3774.cloudpartnerservices.goog
-      sha256: 93460f66d17ee70df899e91db350d9705c20b1576800f96acbd78fa004e7dc07
-      version: 2.49.1
   repo: prometheus2
   tags:
   - 2.49.1-debian12
