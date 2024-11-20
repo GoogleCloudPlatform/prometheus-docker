@@ -14,6 +14,7 @@
 
 
 cloudbuild:
+  docker_image: gcr.io/cloud-builders/docker:24.0.9
   enable_parallel: false
 versions:
 - dir: 2/debian12/2.54
@@ -23,6 +24,9 @@ versions:
       sha256: 31715ef65e8a898d0f97c8c08c03b6b9afe485ac84e1698bcfec90fc6e62924f
       version: 2.54.1
   repo: prometheus2
+  annotations:
+  - key: com.googleapis.cloudmarketplace.product.service.name
+    value: services/dfd27a7c-1349-420c-82bc-cb0a4f1f3774.cloudpartnerservices.goog
   tags:
   - 2.54.1-debian12
   - 2.54-debian12
@@ -37,6 +41,9 @@ versions:
     prometheus:
       sha256: 93460f66d17ee70df899e91db350d9705c20b1576800f96acbd78fa004e7dc07
       version: 2.49.1
+  annotations:
+  - key: com.googleapis.cloudmarketplace.product.service.name
+    value: services/dfd27a7c-1349-420c-82bc-cb0a4f1f3774.cloudpartnerservices.goog
   repo: prometheus2
   tags:
   - 2.49.1-debian12
